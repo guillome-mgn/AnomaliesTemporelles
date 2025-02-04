@@ -9,7 +9,11 @@ public class Main {
 		// Créer des agents temporels
 		AgentScientifique agentScientifique = new AgentScientifique("Albert", 1, 2000);
 		AgentTechnologique agentTechnologique = new AgentTechnologique("Ada", 2, 2001);
-		AgentInfiltre agentInfiltreur = new AgentInfiltre("Alan", 3, 2002);
+		AgentInfiltre agentInfiltre = new AgentInfiltre("Alan", 3, 2002);
+
+		// Tester les capacités 
+		agentScientifique.analyserAnomalie();
+		agentTechnologique.piraterSysteme("Système 1");
 		
 		// Créer des anomalies temporelles
 		AnomalieTemporelle anomalie1 = new AnomalieTemporelle(
@@ -28,6 +32,11 @@ public class Main {
 		// Créer des missions
 		Mission mission1 = new Mission("Mission 1", anomalie1, agentScientifique);
 		Mission mission2 = new Mission("Mission 2", anomalie2, agentTechnologique);
+
+		// Changer l'agent de la mission 2 pour montrer le polymorphisme
+		System.out.println(mission2.getAgentAssigne().getNom());
+		mission2.setAgent(agentInfiltre);
+		System.out.println(mission2.getAgentAssigne().getNom());
 	}
 
 }

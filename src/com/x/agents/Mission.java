@@ -22,6 +22,11 @@ public class Mission {
         return this.agentAssigne;
     }
 
+    public void setAgent(AgentsTemporels agent) {
+        this.agentAssigne = agent;
+        executerMission();
+    }
+
     private void executerMission() {
         agentAssigne.executerMission();
     }
