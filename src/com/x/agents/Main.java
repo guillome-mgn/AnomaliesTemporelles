@@ -1,6 +1,7 @@
 package com.x.agents;
 
 import com.x.agents.AnomalieTemporelle.NiveauDanger;
+import com.x.agents.AnomalieTemporelle.Status;
 
 public class Main {
 
@@ -14,14 +15,14 @@ public class Main {
 		AnomalieTemporelle anomalie1 = new AnomalieTemporelle(
 			"Anomalie 1", 
 			2000, 
-			AnomalieTemporelle.NiveauDanger.BAS, 
-			AnomalieTemporelle.Status.NON_RESOLUE
+			NiveauDanger.BAS, 
+			Status.NON_RESOLUE
 		);
 		AnomalieTemporelle anomalie2 = new AnomalieTemporelle(
 			"Anomalie 2", 
 			2001, 
-			AnomalieTemporelle.NiveauDanger.MOYEN, 
-			AnomalieTemporelle.Status.NON_RESOLUE
+			NiveauDanger.MOYEN, 
+			Status.NON_RESOLUE
 		);
 
 		// Créer des missions
